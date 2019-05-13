@@ -1,0 +1,16 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.AccessEventCompositeJsonEncoder">
+            <providers>
+                <timestamp />
+                <statusCode />
+                <requestedUrl />
+                <requestedUri />
+                <contentLength />
+                <pattern>%fullRequest%n%n%fullResponse</pattern>
+            </providers>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="STDOUT" />
+</configuration>

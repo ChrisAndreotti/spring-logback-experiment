@@ -1,0 +1,24 @@
+<configuration>
+    <contextName>DemoService</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp />
+                <contextName />
+                <loggerName />
+                <logLevel />
+                <message />
+                <stackTrace />
+                <arguments />
+                <mdc />
+            </providers>
+        </encoder>
+    </appender>
+
+    <logger name="com.candreotti" level="info" />
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
